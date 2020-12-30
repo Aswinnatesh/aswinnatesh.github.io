@@ -1,0 +1,38 @@
+# section information
+section:
+  name: Skills
+  id: skills
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your Skills.
+# Give a summary of you each skill in the summary section.
+skills:
+- name: Verilog / System Verilog
+  icon: "/images/sections/skills/linux.png"
+  summary: "Using as the main operating system. Capable of writing bash/shell scripts."
+
+- name: Python
+  icon: "/images/sections/skills/git.png"
+  summary: "Experienced with git-based development. Mostly, use Github. Also, have experience in working with GitLab."
+  #url: "#"
+
+- name: C / C++
+  icon: "/images/sections/skills/c++.png"
+  summary: "Know basic C/C++ programming. Used for contest programming and problem solving."
+
+- name: Linux
+  icon: "/images/sections/skills/linux.png"
+  summary: "Using as the main operating system. Capable of writing bash/shell scripts."
+
+- name: Git
+  icon: "/images/sections/skills/git.png"
+  summary: "Experienced with git-based development. Mostly, use Github. Also, have experience in working with GitLab."
+  #url: "#"
+
+- name: Jenkins 
+  icon: "/images/sections/skills/c++.png"
+  summary: "Know basic C/C++ programming. Used for contest programming and problem solving."
