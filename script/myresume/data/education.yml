@@ -1,0 +1,20 @@
+name: Education
+source:
+  - title: Masters in Electrical Engineering 
+    univ: Stony Brook University
+    place: New York, USA 
+    date: Aug 2017 to Dec 2018
+    type: Coursework 
+    description: Nanoscale IC Design - Adv. Digital System Design and Gen. - Computer Architecture
+    description2: Adv. VLSI System Testing  -  Computer Architecture - System Specification & Modeling - Solid State Electronics
+    description3: Cyber Physical Systems - Mobile Cloud Computing - Wireless Communication 
+
+
+  - title: Bachelors in Electrical and Electronics Engineering
+    univ: Anna University
+    place: Chennai, India
+    date: Aug 2012 to Apr 2016
+    type: Coursework
+    description: Micro Controllers & Processors - Digital Logic Circuits - Linear Integrated Circuits
+    description2: Operating Systems - Data Structures & Algorithms - Operations Research
+

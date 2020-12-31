@@ -1,0 +1,63 @@
+baseurl = "https://aswinnatesh.github.io/"
+languageCode = "en-US"
+title = "Aswin Natesh"
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = "UA-111383871-1"
+theme = "hugo-sustain"
+
+[permalinks]
+  post = "/:year/:month/:day/:slug"
+
+[params]
+  avatar = "profile.jpg"
+  author = "Aswin Natesh"
+  description = "My Personal Page"
+
+  # Custom assets can be linked with their paths relative to static/
+  custom_css = []
+  custom_js  = []
+
+[params.social]
+  Github        = "Aswinnatesh"
+  Email         = "aswinnatesh.venkatesh@alumni.stonybrook.edu"
+  Twitter       = "username"
+  LinkedIn      = "aswinnatesh/"
+  Stackoverflow = "username"
+  Scholar = "https://scholar.google.com/citations?user=kMNuLysAAAAJ&hl=en"
+  Facebook = "niwsav"
+
+## Main Menu
+
+[[menu.main]]
+  name = "publications"
+  identifier = "publications"
+  weight = 200
+  url = "/publications/"
+
+  [[menu.main]]
+  name = "resume"
+  identifier = "resume"
+  weight = 300
+  url = "/resume/"
+
+[[menu.main]]
+  name = "projects"
+  identifier = "projects"
+  weight = 200
+  url = "/projects/"
+
+[[menu.main]]
+  name = "About Me"
+  identifier = "About"
+  weight = 200
+  url = "/About/"
+
+[[menu.main]]
+  name = "travel"
+  identifier = "travel"
+  weight = 300
+  url = "/travel/"
+
+

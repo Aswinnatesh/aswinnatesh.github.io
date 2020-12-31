@@ -1,0 +1,7 @@
+<section class="thirteen columns">
+  <h1>{{ .Site.Data.scholastic.name }}</h1>
+  {{ range .Site.Data.scholastic.source }}
+    {{ .title }} &nbsp;&nbsp; {{ title .type }}&nbsp;&nbsp;&nbsp;&nbsp;{{ .description }}
+  </br> 
+  {{ end }}
+</section>

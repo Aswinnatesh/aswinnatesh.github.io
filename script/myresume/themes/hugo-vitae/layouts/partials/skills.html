@@ -1,0 +1,112 @@
+<section class="thirteen columns">
+  <h1>{{ .Site.Data.skills.name }}</h1>
+  <article>
+    <header>
+      <style>
+table, th, td {
+    border: none;
+}
+</style>
+</head>
+<body>
+
+<table style="width:90%">
+  <tr>
+ <td>
+      <strong><font face="Georgia" size="3.6px" colour="#181818">EDA/Software Tools</font></strong><br>
+
+      &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;Synopsys Design Compiler
+      &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;Modelsim<br>  
+      &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;Virtuoso
+      &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;Altera Quartus 
+      &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;SoC EDS<br> 
+      &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;Atmel Studio 
+      &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;KEIL uVision<br> 
+      &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;TINA SPICE<br> 
+      &nbsp;<small><i class=""></i></small> &nbsp;
+    </td> 
+    <td> 
+        <td>
+      <strong><font face="Georgia" size="3.6px" colour="#181818">Programming</font></strong><br>
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;<strong>5000 Lines</strong>: System Verilog, Embedded C, C++ <br>
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;<strong>500 Lines</strong>:  Verilog, Python, Assembly, Linux
+      </br></br>
+    </td>
+  </tr>
+    <tr>
+    <td>
+      <strong><font face="Georgia" size="3.6px" colour="#181818">Hardware Platforms</font></strong><br>
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;Altera Cyclone V 
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;Raspberry Pi <br>
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;Beaglebone Black 
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;Atmel Family <br>
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;MBED/ARM Cortex 
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;nRF51822 BLE<br>
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;STM Nucleo
+       &nbsp;<small><i class=""></i></small> &nbsp;
+      </br></br>
+    </td>
+    <td>
+          <td>
+      <strong><font face="Georgia" size="3.6px" colour="#181818">Bus Protocols</font></strong><br>
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;UART 
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;USB
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;SPI
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;I2C
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;GPIO’s <br>
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;433MHz RF
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;Ethernet
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;MIPs Arch. <br>
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;Sony Cell SPU Arch.
+    </td> 
+  </tr>
+  <tr>
+
+  <tr>
+    <td>
+      <strong><font face="Georgia" size="3.6px" colour="#181818">Sensor and Kits</font></strong><br>
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;Ultrasonic/Bulk PZT
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;Flex/FSR<br>
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;NFC Tags
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;Accelerometer<br>
+       &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;AC Current/Voltage Sensing
+       &nbsp;<small><i class=""></i></small> &nbsp;
+      </br></br>
+    </td>
+    <td>
+          <td>
+      <strong><font face="Georgia" size="3.6px" colour="#181818">Bus Protocols</font></strong><br>
+     &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;STA
+     &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;JTAG
+     &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;Saleae Logic Analyzer<br> 
+     &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;Basic Lab Test Instruments
+    </td> 
+  </tr>
+  <tr>
+
+<!--     <td>
+      <strong><font face="Georgia" size="3.6px" colour="#181818">Software Tools</font></strong><br>
+
+    </td> -->
+
+<!--     <td>
+      <strong><font face="Georgia" size="3.6px" colour="#181818">Operating Systems</font></strong><br>
+      &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;Linux 
+      &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;Machintosh <br> 
+      &nbsp;<small><i class="fa fa-plus-square"></i></small> &nbsp;Windows
+    </td> -->
+  <!-- </tr> -->
+</table>
+
+
+
+      <!--<h1>{{ .Site.Data.skills.title }}</h1>-->
+    </header>
+   {{ range .Site.Data.skills.source }}
+    <!--<p>
+      {{ range $i, $seq := (seq .stars) }}<i class="fa fa-star"></i>{{ end }}{{ range $i, $seq := (seq (sub 5 (int .stars))) }}<i class="fa fa-star-o"></i>{{ end }}
+        &nbsp;&nbsp;<em>{{ delimit .name "</em>, <em>" "</em> & <em>" }}</em>
+    </p>-->
+    {{ end }}
+  </article>
+</section>

@@ -1,0 +1,21 @@
+<section id="projects">
+  <div class="container">
+    <h3><strong><font color="#27A822"><a href="{{ .Permalink }}">{{ .Site.Data.projects.name }}</a></font></strong></h3><br/><br/>
+    <div class="panel panel-default">
+      <div class="panel-body">
+      {{ range $i, $el := .Site.Data.projects.source }}
+        <h5><b><font color="Navy-Blue">{{ $el.head }} </font></b></h5>
+        <h5>
+          <i class="{{ .icon }}"></i>&nbsp;&nbsp;
+          <strong><a href={{ $el.link }}> #{{ add $i 1 }}</a></strong>&nbsp;-&nbsp;<strong>{{ $el.description }} </strong><br />
+          {{ $el.description2 }} &nbsp;-&nbsp; <small><font color="Blue">[{{ $el.period }}]</font></small> 
+          <br />
+          <br />
+        </h5>
+      {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+
