@@ -1,0 +1,15 @@
+<section class="thirteen columns">
+<!--    <br> commented Mar 19 -->
+  <h1>{{ .Site.Data.Certification.name }}</h1>
+  {{ range .Site.Data.Certification.source }}
+  <article>
+    <header>
+      <h1>{{ .title }}</h1>
+      <span>
+        <address>{{ .place }}</address>
+        <time>{{ .date }}</time>
+      </span>
+    </header>
+  </article>
+  {{ end }}
+</section>

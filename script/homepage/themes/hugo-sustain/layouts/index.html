@@ -1,0 +1,26 @@
+{{ partial "head" . }}
+  <body>
+    <div id="wrap">
+      
+      {{ partial "header" . }}
+      <section id="about">
+        <div class="container">
+        <div class="avatar">
+          <img class="img-circle" src="{{ .Site.BaseURL }}img/{{ .Site.Params.avatar }}" alt="Responsive image">
+        </div>
+        <h3>I'm <strong>{{ .Site.Params.author }}</strong>, an electronics enthusiast</h3>
+        <h3> Graduated from Stony Brook University </h3>
+        <h3>
+          <font size=5 color = Red> Engineer </font> | 
+          <font size=5 color = Orange> Traveller </font> | 
+          <font size=5 color = Green> Blogger </font></h3>
+<!--         <h3>have a look at some of my <a href="{{ .Site.BaseURL }}projects/"> projects</a> & <a href="{{ .Site.BaseURL }}resume/">resume </a> here.</h3> -->
+       <!--  <h3>For more check out my academic &amp; professional <a href="https://demo.nurlan.co/hugo-vitae/">resume</a>.</h3> -->
+       <!-- <h3>Contact me at <a href="http://twitter.com/{{ .Site.Params.Social.Twitter }}">@{{ .Site.Params.Social.Twitter }}</a> or by <a href="mailto:{{ .Site.Params.Social.Email }}">email</a>.</h3> -->
+        {{ partial "social.html" . }}
+        </div>
+      </section>
+    </div>
+    {{ partial "footer" . }}
+  </body>
+</html>

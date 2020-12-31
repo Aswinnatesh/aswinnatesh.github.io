@@ -1,0 +1,25 @@
+<div class="social">
+  <ul class="social-links">
+
+    {{ if .Site.Params.Social.Github }}
+      <li><a href="http://github.com/{{ .Site.Params.Social.Github }}"><i class="fa fa-github"></i></a></li>
+    {{ end }}
+        {{ if .Site.Params.Social.Scholar }}
+      <li><a href="{{ .Site.Params.Social.Scholar }}"><i class="fa fa-google"></i></a></li>
+    {{ end }}
+
+    {{ if .Site.Params.Social.Email }}
+      <li><a href="mailto:{{ .Site.Params.Social.Email }}"><i class="fa fa-envelope"></i></a></li>
+    {{ end }}
+    
+    {{ if .Site.Params.Social.LinkedIn }}
+      <li><a href="http://linkedin.com/in/{{ .Site.Params.Social.LinkedIn }}"><i class="fa fa-linkedin"></i></a></li>
+    {{ end }}
+
+    {{ if .Site.Params.Social.Facebook }}
+      <li><a href="http://facebook.com/{{ .Site.Params.Social.Twitter }}"><i class="fa fa-facebook"></i></a></li>
+    {{ end }}
+        &nbsp    &nbsp    &nbsp    &nbsp     &nbsp
+
+  </ul>
+</div>

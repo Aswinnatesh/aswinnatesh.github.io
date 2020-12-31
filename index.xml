@@ -1,1 +1,46 @@
-2019_portfolio_archive/index.xml
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aswin Natesh</title>
+    <link>https://aswinnatesh.github.io/</link>
+    <description>Recent content on Aswin Natesh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 02 Oct 2016 22:55:05 -0400</lastBuildDate>
+    
+	<atom:link href="https://aswinnatesh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About Me</title>
+      <link>https://aswinnatesh.github.io/about/</link>
+      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
+      
+      <guid>https://aswinnatesh.github.io/about/</guid>
+      <description>Curious? Then read on&amp;hellip; I&amp;rsquo;m a electronics enthusiast by passion. Graduated from Stony Brook University with strong focus in ASIC/FPGA Digital Design. I love developing products/prototypes that are of use to people and society, and that’s how most of my free time is spent. My interest in electronics started when I was a kid. I&amp;rsquo;m a hobbyist photographer and designer. Check out few of my works here. Reach me at: aswinnateshv {at} gmail {dot} com</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://aswinnatesh.github.io/projects/</link>
+      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
+      
+      <guid>https://aswinnatesh.github.io/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Research Publications</title>
+      <link>https://aswinnatesh.github.io/publications/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://aswinnatesh.github.io/publications/</guid>
+      <description>#1: Low-cost wireless intelligent two hand gesture recognition system 2017 Annual IEEE International Systems Conference (SysCon), Montreal, QC, 2017 pp. 1-6.
+doi: 10.1109/SYSCON.2017.7934745 (Acceptance Rate: 14.6%)
+#2: Low cost smart glove for universal control of IR devices 2016 IEEE International Symposium on Technology and Society (ISTAS), Kollam, 2016, pp. 1-5.
+doi: 10.1109/ISTAS.2016.7764274
+#3: Smart helmets for automatic control of headlamps 2015 International Conference on Smart Sensors and Systems (IC-SSS), Bangalore, 2015, pp.</description>
+    </item>
+    
+  </channel>
+</rss>

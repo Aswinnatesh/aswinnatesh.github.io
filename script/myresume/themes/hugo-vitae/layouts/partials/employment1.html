@@ -1,0 +1,15 @@
+<section class="thirteen columns">
+  <h1>{{ .Site.Data.employment1.name }}</h1>
+  {{ range .Site.Data.employment1.source }}
+    <article>
+    <header>
+      <h1>{{ .prof }}</h1>
+      <span>
+        <address>{{ .place }}</address>
+        <time>{{ .time }}</time>
+      </span>
+    </header>
+    <!-- <p><small><i class="fa fa-check"></i></small> &nbsp;{{ .description }} <br/><small><i class="fa fa-check"></i></small> &nbsp;{{ .description2 }}</p> -->
+  </article>
+  {{ end }}
+<!--</section> -->
