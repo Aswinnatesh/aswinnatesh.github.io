@@ -1,10 +1,9 @@
-name: Deploy to Github Pages
+name: Auto Deploy Cron to Github Pages
 
 # run when a commit is pushed to "source" branch
 on:
-  push:
-     branches:
-     - source_travel
+  schedule:
+     - cron: "*/5 * * * *"
 
 jobs:
   deploy:
@@ -53,3 +52,4 @@ jobs:
         publish_dir: ./public
         destination_dir: travel
         cname: aswinnatesh.com
+
