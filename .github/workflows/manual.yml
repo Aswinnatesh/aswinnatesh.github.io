@@ -1,14 +1,11 @@
 # This is a basic workflow that is manually triggered
 
-name: Manual workflow
+name: Flickr Manual Deploy
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
 on:
-  workflow_dispatch:
-  schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '*/15 * * * *'     
+  workflow_dispatch:  
 
 jobs:
   deploy:
