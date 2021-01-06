@@ -1,338 +1,140 @@
-/*
-	Phugo - Photogallery Theme for Hugo
-	by Pavel Kanyshev | github.com/aerohub
-	It's based on Multiverse by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
-(function($) {
-
-	skel.breakpoints({
-		xlarge: '(max-width: 1680px)',
-		large: '(max-width: 1280px)',
-		medium: '(max-width: 980px)',
-		small: '(max-width: 736px)',
-		xsmall: '(max-width: 480px)'
-	});
-
-	$(function() {
-
-		var	$window = $(window),
-			$body = $('body'),
-			$wrapper = $('#wrapper');
-
-		// Hack: Enable IE workarounds.
-			if (skel.vars.IEVersion < 12)
-				$body.addClass('ie');
-
-		// Touch?
-			if (skel.vars.mobile)
-				$body.addClass('touch');
-
-		// Transitions supported?
-			if (skel.canUse('transition')) {
-
-				// Add (and later, on load, remove) "loading" class.
-					$body.addClass('loading');
-
-					$window.on('load', function() {
-						window.setTimeout(function() {
-							$body.removeClass('loading');
-						}, 100);
-					});
-
-				// Prevent transitions/animations on resize.
-					var resizeTimeout;
-
-					$window.on('resize', function() {
-
-						window.clearTimeout(resizeTimeout);
-
-						$body.addClass('resizing');
-
-						resizeTimeout = window.setTimeout(function() {
-							$body.removeClass('resizing');
-						}, 100);
-
-					});
-
-			}
-
-		// Scroll back to top.
-			$window.scrollTop(0);
-
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
-
-		// Panels.
-			var $panels = $('.panel');
-
-			$panels.each(function() {
-
-				var $this = $(this),
-					$toggles = $('[href="#' + $this.attr('id') + '"]'),
-					$closer = $('<div class="closer" />').appendTo($this);
-
-				// Closer.
-					$closer
-						.on('click', function(event) {
-							$this.trigger('---hide');
-						});
-
-				// Events.
-					$this
-						.on('click', function(event) {
-							event.stopPropagation();
-						})
-						.on('---toggle', function() {
-
-							if ($this.hasClass('active'))
-								$this.triggerHandler('---hide');
-							else
-								$this.triggerHandler('---show');
-
-						})
-						.on('---show', function() {
-
-							// Hide other content.
-								if ($body.hasClass('content-active'))
-									$panels.trigger('---hide');
-
-							// Activate content, toggles.
-								$this.addClass('active');
-								$toggles.addClass('active');
-
-							// Activate body.
-								$body.addClass('content-active');
-
-						})
-						.on('---hide', function() {
-
-							// Deactivate content, toggles.
-								$this.removeClass('active');
-								$toggles.removeClass('active');
-
-							// Deactivate body.
-								$body.removeClass('content-active');
-
-						});
-
-				// Toggles.
-					$toggles
-						.removeAttr('href')
-						.css('cursor', 'pointer')
-						.on('click', function(event) {
-
-							event.preventDefault();
-							event.stopPropagation();
-
-							$this.trigger('---toggle');
-
-						});
-
-			});
-
-			// Global events.
-				$body
-					.on('click', function(event) {
-
-						if ($body.hasClass('content-active')) {
-
-							event.preventDefault();
-							event.stopPropagation();
-
-							$panels.trigger('---hide');
-
-						}
-
-					});
-
-				$window
-					.on('keyup', function(event) {
-
-						if (event.keyCode == 27
-						&&	$body.hasClass('content-active')) {
-
-							event.preventDefault();
-							event.stopPropagation();
-
-							$panels.trigger('---hide');
-
-						}
-
-					});
-
-		// Header.
-			var $header = $('#header');
-
-			// Links.
-				$header.find('a').each(function() {
-
-					var $this = $(this),
-						href = $this.attr('href');
-
-					// Internal link? Skip.
-						if (!href
-						||	href.charAt(0) == '#')
-							return;
-
-					// Redirect on click.
-						$this
-							.removeAttr('href')
-							.css('cursor', 'pointer')
-							.on('click', function(event) {
-
-								event.preventDefault();
-								event.stopPropagation();
-
-								window.location.href = href;
-
-							});
-
-				});
-
-		// Footer.
-			var $footer = $('#footer');
-
-			// Copyright.
-			// This basically just moves the copyright line to the end of the *last* sibling of its current parent
-			// when the "medium" breakpoint activates, and moves it back when it deactivates.
-				$footer.find('.copyright').each(function() {
-
-					var $this = $(this),
-						$parent = $this.parent(),
-						$lastParent = $parent.parent().children().last();
-
-					skel
-						.on('+medium', function() {
-							$this.appendTo($lastParent);
-						})
-						.on('-medium', function() {
-							$this.appendTo($parent);
-						});
-
-				});
-
-		// Main.
-			var $main = $('#main');
-
-			// Thumbs.
-				$main.children('.thumb').each(function() {
-
-					var	$this = $(this),
-						$image = $this.find('.image'), $image_img = $image.children('img'),
-						x;
-
-					// No image? Bail.
-						if ($image.length == 0)
-							return;
-
-					// Image.
-					// This sets the background of the "image" <span> to the image pointed to by its child
-					// <img> (which is then hidden). Gives us way more flexibility.
-
-						// Set background.
-							$image.css('background-image', 'url(' + $image_img.attr('src') + ')');
-
-						// Set background position.
-							if (x = $image_img.data('position'))
-								$image.css('background-position', x);
-
-						// Hide original img.
-							$image_img.hide();
-
-					// Hack: IE<11 doesn't support pointer-events, which means clicks to our image never
-					// land as they're blocked by the thumbnail's caption overlay gradient. This just forces
-					// the click through to the image.
-						if (skel.vars.IEVersion < 11)
-							$this
-								.css('cursor', 'pointer')
-								.on('click', function() {
-									$image.trigger('click');
-								});
-
-				});
-
-			// Thumbs Index.
-				$main.children('.thumb').each(function() {
-
-					var	$this = $(this),
-						$link = $this.find('.link'), $link_img = $link.children('img'),
-						x;
-
-					// No link? Bail.
-						if ($link.length == 0)
-							return;
-
-					// link.
-					// This sets the background of the "link" <span> to the link pointed to by its child
-					// <img> (which is then hidden). Gives us way more flexibility.
-
-						// Set background.
-							$link.css('background-image', 'url(' + $link_img.attr('src') + ')');
-
-						// Set background position.
-							if (x = $link_img.data('position'))
-								$link.css('background-position', x);
-
-						// Hide original img.
-							$link_img.hide();
-
-					// Hack: IE<11 doesn't support pointer-events, which means clicks to our link never
-					// land as they're blocked by the thumbnail's caption overlay gradient. This just forces
-					// the click through to the link.
-						if (skel.vars.IEVersion < 11)
-							$this
-								.css('cursor', 'pointer')
-								.on('click', function() {
-									$link.trigger('click');
-								});
-
-				});
-			
-			// Poptrox.
-				$main.poptrox({
-					baseZIndex: 20000,
-					caption: function($a) {
-
-						var s = '';
-
-						$a.nextAll().each(function() {
-							s += this.outerHTML;
-						});
-
-						return s;
-
-					},
-					fadeSpeed: 300,
-					onPopupClose: function() { $body.removeClass('modal-active'); },
-					onPopupOpen: function() { $body.addClass('modal-active'); },
-					overlayOpacity: 0,
-					popupCloserText: '',
-					popupHeight: 150,
-					popupLoaderText: '',
-					popupSpeed: 300,
-					popupWidth: 150,
-					selector: '.thumb > a.image',
-					usePopupCaption: true,
-					usePopupCloser: true,
-					usePopupDefaultStyling: false,
-					usePopupForceClose: true,
-					usePopupLoader: true,
-					usePopupNav: true,
-					windowMargin: 50
-				});
-
-				// Hack: Set margins to 0 when 'xsmall' activates.
-					skel
-						.on('-xsmall', function() {
-							$main[0]._poptrox.windowMargin = 50;
-						})
-						.on('+xsmall', function() {
-							$main[0]._poptrox.windowMargin = 0;
-						});
-
-	});
-
+"use strict";
+
+var projectCards;
+var isMobile = false, isTablet = false, isLaptop = false;
+(function ($) {
+  jQuery(document).ready(function () {
+    function detectDevice() {
+      if (window.innerWidth <= 425) {
+        isMobile = true;
+        isTablet = false;
+        isLaptop = false;
+      } else if (window.innerWidth <= 768) {
+        isMobile = false;
+        isTablet = true;
+        isLaptop = false;
+      } else {
+        isMobile = false;
+        isTablet = false;
+        isLaptop = true;
+      }
+    }
+    detectDevice();
+
+    // ================= Smooth Scroll ===================
+    function addSmoothScroll() {
+      // ref: https://css-tricks.com/snippets/jquery/smooth-scrolling/
+      // Select all links with hashes
+      $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function (event) {
+          // On-page links
+          if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+            &&
+            location.hostname == this.hostname
+          ) {
+            // Figure out element to scroll to
+            var target = $(decodeURI(this.hash));
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+              // Only prevent default if animation is actually gonna happen
+              event.preventDefault();
+
+              let offset = 60;
+              if (isMobile) {
+                offset = 710;
+              } else if (isTablet) {
+                offset = 60;
+              }
+              $('html, body').animate({
+                scrollTop: target.offset().top - offset
+              }, 1000, function () {
+                // Callback after animation
+                // Must change focus!
+                var $target = $(target);
+                $target.focus();
+                if ($target.is(":focus")) { // Checking if the target was focused
+                  return false;
+                } else {
+                  $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                  $target.focus(); // Set focus again
+                };
+              });
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = this.hash
+            }
+          }
+        });
+    }
+    addSmoothScroll();
+
+    // re-render custom functions on window resize
+    window.onresize = function () {
+      detectDevice();
+      addSmoothScroll();
+    };
+  });
 })(jQuery);
+
+
+// Toggle sidebar on click. Here, class "hide" open the sidebar
+function toggleSidebar() {
+  let sidebar = document.getElementById("sidebar-section");
+  if (sidebar == null) {
+    return
+  }
+  if (sidebar.classList.contains("hide")) {
+    sidebar.classList.remove("hide")
+  } else {
+    // if toc-section is open, then close it first
+    let toc = document.getElementById("toc-section");
+    if (toc != null && toc.classList.contains("hide")) {
+      toc.classList.remove("hide");
+    }
+    // add "hide" class
+    sidebar.classList.add("hide")
+    // if it is mobile device. then scroll to top.
+    if (isMobile && sidebar.classList.contains("hide")) {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+      if (document.getElementById("hero-area") != null) {
+        document.getElementById("hero-area").classList.toggle("hide");
+      }
+    }
+  }
+  if (document.getElementById("content-section") != null) {
+    document.getElementById("content-section").classList.toggle("hide");
+  }
+}
+
+// Toggle Table of Contents on click. Here, class "hide" open the toc
+function toggleTOC() {
+  let toc = document.getElementById("toc-section");
+  if (toc == null) {
+    return
+  }
+  if (toc.classList.contains("hide")) {
+    toc.classList.remove("hide");
+  } else {
+    // if sidebar-section is open, then close it first
+    let sidebar = document.getElementById("sidebar-section");
+    if (sidebar != null && sidebar.classList.contains("hide")) {
+      sidebar.classList.remove("hide");
+    }
+    // add "hide" class
+    toc.classList.add("hide")
+    // if it is mobile device. then scroll to top.
+    if (isMobile && toc.classList.contains("hide")) {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  }
+  if (document.getElementById("hero-area") != null) {
+    document.getElementById("hero-area").classList.toggle("hide");
+  }
+}
+
