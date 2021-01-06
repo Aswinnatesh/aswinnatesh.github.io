@@ -5,6 +5,8 @@ on:
   push:
      branches:
      - source_travel
+  schedule:
+     - cron: '*/5 * * * *'
 
 jobs:
   deploy:
