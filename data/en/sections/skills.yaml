@@ -13,12 +13,12 @@ section:
 skills:
 - name: EDA / Design Tools
   icon: "/images/sections/skills/git.png"
-  summary: "Experienced with Cadence & Synopsys simulation, synthesis, linting and formality tools. Also familiar with Xilinx Vivado for FPGA developement" 
+  summary: "Experienced with Cadence & Synopsys simulation, synthesis, linting and formality tools. Also familiar with Xilinx Vivado for FPGA development" 
   #url: "#"
 
 - name: Programming 
   icon: "/images/sections/skills/linux.png"
-  summary: "Profecient in System Verilog. Experienced in Python, Shell for scripting needs and C/C++ for firmware development."
+  summary: "Proficient in System Verilog. Experienced in Python, Shell for scripting needs and C/C++ for firmware development."
 
 - name: Computer Architecture
   icon: "/images/sections/skills/linux.png"
@@ -36,4 +36,5 @@ skills:
 
 - name: Expertise
   icon: "/images/sections/skills/c++.png"
-  summary: "Profecient in Sensor System Development, Rapid Prototyping using MPU’s & FPGA’s, Board & IP Level Bring‐Up"
+  summary: "Proficient in Sensor System Development, Rapid Prototyping using MPU’s & FPGA’s, Board & IP Level Bring‐Up"
+

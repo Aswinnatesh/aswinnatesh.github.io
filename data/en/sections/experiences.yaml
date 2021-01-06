@@ -23,9 +23,9 @@ experiences:
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
     responsibilities:
-    - Current role emphasizes on ASIC/FPGA design for motion sensor products.
+    - Current role emphasises on ASIC/FPGA design for motion sensor products.
     - Micro-architect and implement Edge Motion Processor IP in Silicon.
-    - Define FPGA architecture, RTL Synthesis, timing analysis and optimization.
+    - Define FPGA architecture, RTL Synthesis, timing analysis and optimisation.
 
 - company:
     name: TDK Invensense Inc.
@@ -54,3 +54,4 @@ experiences:
     - Lead authored 2 publications and led 2 projects on smart and assistive living.
     - Lead the design and development of device test-bench & Custom Made Sensors.
     - Mentored undergraduate students and peers in embedded systems and HW development.
+
