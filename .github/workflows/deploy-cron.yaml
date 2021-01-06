@@ -3,7 +3,7 @@ name: Auto Deploy Cron to Github Pages
 # run when a commit is pushed to "source" branch
 on:
   schedule:
-     - cron: "*/5 * * * *"
+    - cron: "*/5 * * * *"
 
 jobs:
   deploy:
