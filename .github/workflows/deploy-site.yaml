@@ -15,7 +15,6 @@ jobs:
       with:
         submodules: true  # Fetch Hugo themes (true OR recursive)
         fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-    - run: git checkout dba68ed98f191da530a6913871139268285366a4 CNAME
     
     # install Hugo
     - name: Setup Hugo
@@ -35,3 +34,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: main # if your main branch is `master` use that here.
         publish_dir: ./public
+        cname: aswinnatesh.com
