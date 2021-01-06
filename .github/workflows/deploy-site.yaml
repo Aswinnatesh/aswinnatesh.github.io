@@ -43,46 +43,46 @@ jobs:
     
 ###################### Travel Page ######################
 
-      # checkout to the commit that has been pushed
-      - uses: actions/checkout@v2
-        with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-          ref: source_travel
-      
-      # install Python
-      - name: Setup python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8 #install the python needed
+    # checkout to the commit that has been pushed
+    - uses: actions/checkout@v2
+      with:
+        submodules: true  # Fetch Hugo themes (true OR recursive)
+        fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+        ref: source_travel
+    
+    # install Python
+    - name: Setup python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8 #install the python needed
 
-      - name: Install python dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi        
-      - name: execute python script to call flickr api # run the flickr.py to get the latest data
-        run: |
-            cd automa
-            python3 flickr.py
-            
-      # install Hugo
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.77.0'
-          extended: true
+    - name: Install python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi        
+    - name: execute python script to call flickr api # run the flickr.py to get the latest data
+      run: |
+          cd automa
+          python3 flickr.py
+          
+    # install Hugo
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.77.0'
+        extended: true
 
-      # build website
-      - name: Build
-        run: hugo --minify
+    # build website
+    - name: Build
+      run: hugo --minify
 
-      # push the generated content into the `main` (former `master`) branch.
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: main # if your main branch is `master` use that here.
-          publish_dir: ./public
-          destination_dir: travel
-          cname: aswinnatesh.com
+    # push the generated content into the `main` (former `master`) branch.
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: main # if your main branch is `master` use that here.
+        publish_dir: ./public
+        destination_dir: travel
+        cname: aswinnatesh.com
