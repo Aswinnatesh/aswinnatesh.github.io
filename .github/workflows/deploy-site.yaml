@@ -15,8 +15,15 @@ jobs:
       with:
         submodules: true  # Fetch Hugo themes (true OR recursive)
         fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+    
+    # install Python
+    - name: setup python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8 #install the python needed
+
     - name: execute python script to call flickr api # run the flickr.py to get the latest data
-        run: |
+      run: |
           cd automa
           python3 flickr.py
 
