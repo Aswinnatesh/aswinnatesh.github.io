@@ -1,0 +1,88 @@
+# Settings
+baseurl = "https://aswinnatesh.github.io/travel/"
+languageCode = "en-us"
+title = "Myshot 365"
+theme = "custom-phugo"
+googleAnalytics = "UA-XXXXXXX-Y"
+
+[params]
+
+    # Meta
+    description = "MyShot 365 - Aswin's Travel"
+    author = "Aswin Natesh"
+    keywords = "aswin, natesh, venkatesh, photography, myshot365, india, usa, travel, photogallery, photoblog"
+    
+    # Headerbar links
+    # Do not put here too many links,
+    # it will break mobile appearance
+
+    [[params.header.links]]
+    name = "About"
+    url = "#footer"
+    icon = "fa-user"    
+
+    [[params.header.links]]
+    name = "Home"
+    url = "https://aswinnatesh.github.io/"
+    icon = "fa-home"    
+    
+    # Footer panel
+    
+    [params.footer.paragraph]
+    headline = "MyShot 365 - Aswin's Travel"
+    text = "I’ll just say a few things and go off on my merry way. I have picked up a camera for the first time with a different eye. I began to photograph anything and everything around me. Just about all of my free time was spent with a camera or a book about photography in my hand. I hate taking pictures of myself, so you probably would find very less pic of me over here."
+    
+    [params.footer.social]
+    headline = "Follow me"
+
+    [[params.footer.social.links]]
+    label = "Facebook"
+    url = "http://facebook.com/niwsav"
+    icon = "fa-facebook"
+
+    [[params.footer.social.links]]
+    label = "Instagram"
+    url = "https://www.instagram.com/aswin_natesh/"
+    icon = "fa-instagram"
+
+    [[params.footer.social.links]]
+    label = "Github"
+    url = "http://github.com/Aswinnatesh"
+    icon = "fa-github"
+    
+    # Contact form
+    
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'realEmail' below
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+    
+    [params.footer.contact]
+    realEmail = "aswinnateshv@gmail.com"
+    headline = "Get in touch"
+    buttonText = "Send"
+    resetText = "Reset"
+    
+    # 'warning' defines error messages for invalid inputs
+    [params.footer.contact.name]
+    text = "Name *"
+    warning = "Please, enter your name"
+
+    [params.footer.contact.email]
+    text = "Email *"
+    warning = "Please, enter your email."
+
+    [params.footer.contact.message]
+    text = "Message *"
+    warning = "Please, enter your message"
+    
+    # Copyright
+    [params.footer.copyright]
+    name = "Copyright 2019 - Aswin Natesh"
