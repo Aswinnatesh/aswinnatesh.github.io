@@ -12,25 +12,25 @@ section:
 # Give a summary of you each skill in the summary section.
 skills:
 - name: EDA / Design Tools
-  icon: "/images/sections/skills/git.png"
+  icon: "/images/sections/skills/c++.png"
   summary: "Experienced with Cadence & Synopsys simulation, synthesis, linting and formality tools. Also familiar with Xilinx Vivado for FPGA development" 
   #url: "#"
 
 - name: Programming 
-  icon: "/images/sections/skills/linux.png"
+  icon: "/images/sections/skills/c++.png"
   summary: "Proficient in System Verilog. Experienced in Python, Shell for scripting needs and C/C++ for firmware development."
 
 - name: Computer Architecture
-  icon: "/images/sections/skills/linux.png"
+  icon: "/images/sections/skills/c++.png"
   summary: "Good understanding of modern compute processors. Have designed Sony Cell SPU and custom motion processor IP (Silicon). Keen to learn RISC-V Architecture."
 
 - name: Standard Protocols
-  icon: "/images/sections/skills/git.png"
+  icon: "/images/sections/skills/c++.png"
   summary: "Have worked with the following protocols: AMBA AHB/APB, SPI 3W/4W, I2C, I3C."
   #url: "#"
 
 - name: Hardware Platforms
-  icon: "/images/sections/skills/git.png"
+  icon: "/images/sections/skills/c++.png"
   summary: "Familiar with Altera Cyclone V,  Xilinx Zynq, Atmel Family, ARM Family, Nordic BLE’s."
   #url: "#"
 

@@ -2,7 +2,7 @@ baseURL: https://aswinnatesh.com/
 languageCode: en-us
 defaultContentLanguage: en
 title: "Aswin Natesh"
-theme: "toha"
+theme: "custom"
 
 # Manage languages
 # For any more details, you can check the official documentation: https://gohugo.io/content-management/multilingual/
@@ -58,4 +58,4 @@ params:
   # Provide newsletter configuration. This feature hasn't been implemented yet.
   # Currently, you can just hide it from the footer.
   newsletter:
-    enable: true
+    enable: false
