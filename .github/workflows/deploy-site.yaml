@@ -15,7 +15,10 @@ jobs:
       with:
         submodules: true  # Fetch Hugo themes (true OR recursive)
         fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-    
+    - name: execute python script to call flickr api # run the flickr.py to get the latest data
+        run: |
+          cd automa; python3 flickr.py
+
     # install Hugo
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
