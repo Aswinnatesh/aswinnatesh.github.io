@@ -17,10 +17,16 @@ jobs:
         fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
     
     # install Python
-    - name: setup python
+    - name: Setup python
       uses: actions/setup-python@v2
       with:
         python-version: 3.8 #install the python needed
+
+    - name: Install python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi        
 
     - name: execute python script to call flickr api # run the flickr.py to get the latest data
       run: |
