@@ -43,9 +43,6 @@ jobs:
     
 ###################### Travel Page ######################
 
-  deploy:
-      runs-on: ubuntu-18.04
-      steps:
       # checkout to the commit that has been pushed
       - uses: actions/checkout@v2
         with:
@@ -68,6 +65,7 @@ jobs:
         run: |
             cd automa
             python3 flickr.py
+            
       # install Hugo
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
