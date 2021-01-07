@@ -1,7 +1,7 @@
 # section information
 section:
   name: Milestones
-  id: achievements
+  id: milestones
   enable: true
   weight: 6
   showOnNavbar: true
