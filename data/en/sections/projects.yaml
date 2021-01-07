@@ -12,9 +12,9 @@ section:
 buttons:
 - name: Publications
   filter: "published"    
-- name: Semiconductor
+- name: Digital Design
   filter: "semiconductor"
-- name: Embedded
+- name: Embedded Systems
   filter: "embedded"
 - name: Hobby
   filter: "hobby"
