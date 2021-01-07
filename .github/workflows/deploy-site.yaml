@@ -6,9 +6,9 @@ on:
     branches:
     - source
     - source_travel
-    schedule:
-    - cron: "0 */6 * * *"
-    workflow_dispatch:  
+  schedule:
+    - cron: "*/15 * * * *"  
+  workflow_dispatch:  
 
 jobs:
   deploy:
