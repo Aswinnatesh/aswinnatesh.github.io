@@ -158,7 +158,7 @@ projects:
   tags: ["embedded", "sensors", "projects", "system"] 
 
 - name: Compressed Air Driven Vehicle
-  logo: /images/sections/projects/bulb.png    
+  logo: /images/sections/projects/bike.png    
   role: Designer
   timeline: "Jan 2013 - Mar 2013"
   summary: The objective of this project was to design and fabricate a light weight vehicle which can run in Lab carrying a person of 100kgwt (Max) at 10 Kmph. The Prototype Vehicle was successfully designed and was powered solely by air, for Movement and Braking.
