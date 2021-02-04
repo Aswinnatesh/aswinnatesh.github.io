@@ -7,7 +7,7 @@ description: Portfolio and personal blog of Aswin Natesh.
 # specify the list of custom menus that you want to show in the top navbar.
 # they will be separated by a divider from the main menus.
 customMenus:
-- name: Travel
+- name: Photos
   url: https://aswinnatesh.com/travel/
 - name: Wordpress
   url: https://myshot365.wordpress.com/
