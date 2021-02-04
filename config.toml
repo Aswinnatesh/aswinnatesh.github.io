@@ -3,7 +3,7 @@ baseurl = "https://aswinnatesh.github.io/travel/"
 languageCode = "en-us"
 title = "Myshot 365"
 theme = "custom-phugo"
-googleAnalytics = "UA-XXXXXXX-Y"
+googleAnalytics = "UA-111383871-1"
 
 [params]
 
@@ -85,4 +85,4 @@ googleAnalytics = "UA-XXXXXXX-Y"
     
     # Copyright
     [params.footer.copyright]
-    name = "Copyright 2019 - Aswin Natesh"
+    name = "Copyright 2021 - Aswin Natesh"
