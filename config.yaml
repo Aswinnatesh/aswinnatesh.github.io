@@ -28,7 +28,7 @@ markup:
 googleAnalytics: UA-111383871-1
 
 # Enable Disqus forum
-disqusShortname: does-not-exist
+#disqusShortname: does-not-exist
 
 # Enable global emoji support
 enableEmoji: true
@@ -50,7 +50,7 @@ params:
   gitRepo: https://github.com/Aswinnatesh/aswinnatesh
 
   # specify whether you want to write some blog posts or not
-  enableBlogPost: false #TODO: true
+  enableBlogPost: false #true
 
   # specify whether you want to show Table of Contents in reading page
   enableTOC: true

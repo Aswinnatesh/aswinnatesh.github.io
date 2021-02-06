@@ -24,8 +24,8 @@ experiences:
     # give some points about what was your responsibilities at the company.
     responsibilities:
     - Current role emphasises on ASIC/FPGA design for motion sensor products.
-    - Micro-architect and implement Edge Motion Processor IP in Silicon.
-    - Define FPGA architecture, RTL Synthesis, timing analysis and optimisation.
+    - Micro-architect and implement motion processor IP in Silicon.
+    - Define FPGA architecture, RTL Synthesis, timing analysis and optimization.
 
 - company:
     name: TDK Invensense Inc.
@@ -39,7 +39,7 @@ experiences:
     end: Aug 2018
     responsibilities:
     - Designed and Implemented a 150 MSPS ADC‑FPGA System (Cyclone V) with custom FIFO IP for sampling Ultrasonic signals.
-    - Member of Advanced Technology Group, working on next‑gen sensors lead by Peter Hartwell, CTO at InvenSense Inc.
+    - Member of Advanced Technology Group, led by Peter Hartwell at InvenSense Inc.
 
 - company:
     name: Solarillion Foundation
