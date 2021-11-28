@@ -8,7 +8,7 @@ section:
   template: sections/about.html
 
 # your designation
-designation: Hardware Engineer
+designation: Digital Design Engineer
 # your company information
 company:
   name: TDK InvenSense Inc.
@@ -18,7 +18,7 @@ company:
 resume: "files/Aswin-Resume.pdf"
 
 # a summary about you
-summary: 'I’m an electronics enthusiast by passion. Graduated from Stony Brook University with strong focus in Digital Design. I love developing products that are of use to people and society.' 
+summary: 'I’m an electronics enthusiast by passion, currently a Silicon Valley based professional, working in areas of digital design and computer architecture. I graduated from SUNY, Stony Brook with strong focus in Digital Design. I love contributing to products that are of use to people and the society.' 
 
 # your social links
 # give as many as you want. use font-awesome for the icons.
@@ -43,9 +43,9 @@ socialLinks:
   icon: "fab fa-instagram"
   url: "https://www.instagram.com/aswin_natesh/ "
 
-- name: Facebook
-  icon: "fab fa-facebook"
-  url: "https://www.facebook.com/aswinnateshv"
+# - name: Facebook
+#   icon: "fab fa-facebook"
+#   url: "https://www.facebook.com/aswinnateshv"
 
 # your soft skills
 # give the percentage between 50 to 100 with 5 intervals.

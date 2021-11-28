@@ -10,15 +10,16 @@ section:
 
 # Your achievements achievements
 achievements:
-- title: Intern Class 2018
+- title: Intern at TDK InvenSense
   image: /images/sections/achievements/Invensense-Interns-2018.png
-  summary: During my summer internship at TDK Invensense - 2018.
-- title: Graduation 2019 
+  summary: A photo from my summer internship at TDK Invensense (May-2018).
+- title: Class of 2019 
   image: /images/sections/achievements/Aswin-graduation-2019.png
-  summary: Graduated from Stony Brook University - 2019.
-- title: Hack at Cewit 2018 
+  summary: Graduated from Stony Brook University (Dec-2018).
+- title: Cewit Hackathon 
   image: /images/sections/achievements/Hack-at-Cewit-2018.png
-  summary: Won the best use of CISCO’S MERAKI AP Hackathon - 2018 
+  summary: Won the best use of CISCO’S MERAKI AP Hackathon (2018). 
 - title: Hot Chips 32
   image: /images/sections/achievements/hot_chips_32.png
-  summary: Volunteered at Hot Chips 32 viConference - 2019
+  summary: Volunteered at Hot Chips 32 Conference (May-2019).
+
