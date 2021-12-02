@@ -14,11 +14,11 @@ menu:
     # weight: 1
 ---
 
-Customised walking tours are now a major attraction in many big cities such as Mumbai, Delhi, Chennai, Varanasi and Bengaluru. And, these are no random strolls around the old town but are carefully planned around specific themes, ranging from jewellery to history to street food.
+Customized walking tours are now a major attraction in many big cities such as Mumbai, Delhi, Chennai, Varanasi, and Bengaluru. And, these are no random strolls around the old town but are carefully planned around specific themes, ranging from jewelry to history to street food.
 
-Stroll through the streets with likeminded photographers who exchange notes about their experience of the walk and the shooting process. The Chennai Photowalk happens twice every month on Sunday mornings and is conducted by a group leader. The route changes as per the theme, which could be anything: history, food, architecture, gardens and so on.
+Stroll through the streets with like-minded photographers who exchange notes about their experience of the walk and the shooting process. The Chennai Photowalk happens twice every month on Sunday mornings and is conducted by a group leader. The route changes as per the theme, which could be anything: history, food, architecture, gardens and so on.
 
-The Chennai Photowalk Link : https://chennaiphotowalk.wordpress.com/ | Watch this space for walk announcements. We typically have one during the 2nd and 4th weekends of every month.
+The Chennai Photowalk Link: https://chennaiphotowalk.wordpress.com/ | Watch this space for walk announcements. We typically have one during the 2nd and 4th weekends of every month.
 
 >And yes !  Conde'Nast Traveller has mentioned The Chennai Photowalks a must do activity in Chennai among walking tours.
 
