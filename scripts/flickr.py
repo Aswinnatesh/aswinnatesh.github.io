@@ -21,7 +21,7 @@ api_key = "516be3b1d635419c4311a63155e844be"
 
 #Set Directory Paths: 
 env_top_dir = 'TOP_DIR'
-out_dir = os.environ[env_top_dir]+"/content/posts_generated"
+out_dir = os.environ[env_top_dir]+"/scripts/output/"
 if env_top_dir in os.environ:
     logger.info(f'{env_top_dir} is {os.environ[env_top_dir]}')
 else:
@@ -112,11 +112,30 @@ for i, (photoset_id, urls) in enumerate(URLs.items()):
     
     #f= open("./%s/_index.md" %titles[i],"w+")
     f= open(f"./{md_file_name}.md","w+")
-    f.write ("+++ \n")
-    f.write ("albumthumb = \"%s\"\n" %thumb)
-    f.write ("date = \"2016-04-21T19:12:%02d+00:00\"\n" %count)
-    f.write ("title = \"%s\"\n\n" %titles[i])
-    f.write ("+++ \n\n")
+    f.write ("---\n")
+    f.write ("title: \"%s\"\n" %titles[i])
+    f.write ("date: 2020-04-21T19:12:%02d+00:00 #TODO\n" %count)
+    #f.write ("description: Noting here yet! Just a Container #TODO\n")
+    
+
+    #Hero cannot be a URL - as it is not supported. 
+    f.write ("#hero: %s\n" %thumb)
+    url2download = thumb
+    output_filename = os.environ[env_top_dir]+ f"/scripts/images/{md_file_name}.png"
+    thumb_url = f"/images/sections/posts/{md_file_name}.png"
+    os.system(f"curl -o {output_filename} {thumb}")
+    f.write ("hero: %s\n" %thumb_url)
+    
+    f.write ("author:\n  name: Aswin Natesh\n  image: /images/author/aswinnateshv21.png\n")
+    f.write ("\n")
+    f.write ("\nmenu:")
+    f.write ("\n  sidebar:")
+    f.write ("\n    name: %s" %titles[i])
+    f.write ("\n    #identifier: my-travel")
+    f.write ("\n    parent: california-through-my-lens #TODO")
+    f.write ("\n    #weight: 1")
+
+    f.write ("\n\n---\n")
     
     for url in urls:
         f.write(url)

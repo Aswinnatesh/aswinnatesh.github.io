@@ -26,7 +26,7 @@ def main():
     side_bar_name = (args.dir).replace("-", " ")
     side_bar_url = (args.dir).lower()
     f= open("./_index.md","w+")
-    f.write (f"--- \ntitle: {title} \nmenu:\n\tsidebar:\n\t\tname: {side_bar_name}\n\t\tidentifier: {side_bar_url}\n\t\tweight: 300\n---")
+    f.write (f"---\ntitle: {args.dir} \nmenu:\n  sidebar:\n    name: {side_bar_name}\n    identifier: {side_bar_url}\n    weight: 300\n---")
     f.close()
 
 if __name__ == '__main__':
