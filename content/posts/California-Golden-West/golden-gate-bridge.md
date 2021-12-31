@@ -12,7 +12,7 @@ menu:
   sidebar:
     name: Golden Gate Bridge
     #identifier: my-travel
-    parent: californa-golden-west
+    parent: california-golden-west
     #weight: 1
 
 #<br /> {{< figure src="https://farm66.staticflickr.com/65535/51789298382_3628948753_b.jpg">}}
