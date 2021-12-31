@@ -16,7 +16,7 @@ menu:
   sidebar:
     name: Kolam, Lifestyle & Culture
     # identifier: my-travel
-    parent: Incredible-India
+    parent: Madras-An-Emotion
     # weight: 1
 ---
 

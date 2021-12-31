@@ -12,7 +12,7 @@ menu:
   sidebar:
     name: India Weaved in Dreams
     #identifier: my-travel
-    parent: Incredible-India #TODO
+    parent: Madras-An-Emotion #TODO
     #weight: 1
 
 ---

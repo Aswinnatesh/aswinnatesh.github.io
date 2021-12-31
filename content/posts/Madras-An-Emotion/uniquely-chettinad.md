@@ -11,7 +11,7 @@ menu:
   sidebar:
     name: Uniquely Chettinad
     # identifier: my-travel
-    parent: Incredible-India
+    parent: Madras-An-Emotion
     # weight: 1
 ---
 

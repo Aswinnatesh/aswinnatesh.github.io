@@ -10,7 +10,7 @@ menu:
   sidebar:
     name: Brahmotsavam Fete
     # identifier: my-travel
-    parent: Incredible-India
+    parent: Madras-An-Emotion
     # weight: 1
 ---
 

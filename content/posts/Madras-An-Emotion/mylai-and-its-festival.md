@@ -12,7 +12,7 @@ menu:
   sidebar:
     name: Mylai and its Festival
     #identifier: my-travel
-    parent: Incredible-India
+    parent: Madras-An-Emotion
     #weight: 1
 
 ---
