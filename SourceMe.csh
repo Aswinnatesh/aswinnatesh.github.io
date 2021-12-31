@@ -8,3 +8,4 @@ export TOP_DIR TOP_DIR_VAR
 alias newd="python3 ${TOP_DIR_VAR}/scripts/CreatePostContainer.py -dir "
 alias flickr="python3 ${TOP_DIR_VAR}/scripts/flickr.py"
 alias posts="cd ${TOP_DIR_VAR}/content/posts; pwd"
+alias copy="/bin/sh ${TOP_DIR_VAR}/scripts/CopyPosts.csh"

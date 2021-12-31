@@ -19,6 +19,9 @@ sys.path.append('../')
 user_id = "53690459@N04"
 api_key = "516be3b1d635419c4311a63155e844be"
 
+#Lets find Thumb Image
+identifier = "TH" 
+
 #Set Directory Paths: 
 env_top_dir = 'TOP_DIR'
 out_dir = os.environ[env_top_dir]+"/scripts/output/"
@@ -65,15 +68,23 @@ zipped = list(zipped) # Converting to list z
 res = sorted(zipped, key = lambda x: x[1]) # Using sorted and lambda 
 photosetids = list(zip(*res)) [0]
 titles = list(zip(*res)) [2]
-      
+thumbnail=[]
+
 for photoset_id, title in zip(photosetids,titles): ## for each album
     url = get_requestURL(user_id,endpoint="getPhotos") + "&photoset_id=" + photoset_id
     strlist = requests.get(url).content
     json1_data = json.loads(strlist)
     urls = []
+    thumb_tmp=""
     for pic in json1_data["photoset"]["photo"]: ## for each picture in an album
         urls.append(get_photo_url(pic["farm"],pic['server'], pic["id"], pic["secret"], pic["title"]))
+        #lets find the TH Title
+        if identifier in pic["title"]:
+            thumb_tmp = get_photo_url(pic["farm"],pic['server'], pic["id"], pic["secret"], pic["title"])
+            thumb_tmp = (thumb_tmp.split("\"")[1])
     URLs[photoset_id] = urls
+    thumbnail.append(thumb_tmp)
+    
             
 # Creating a content to store output. Contents will be deleted every time. 
 if os.path.isdir(out_dir):
@@ -93,19 +104,16 @@ for i, (photoset_id, urls) in enumerate(URLs.items()):
     #     logger.debug("Directory Existing %s" %titles[i])
     # else:  
     #     logger.debug("Created directory %s" %titles[i])
-
-    #Lets find Thumb Image
-    identifier = "TH" 
-    flag=0
     
-    for url in urls:
-        thumb = random.choice(urls)
-        thumb = thumb.split("\"")[1]
-        if identifier in url:
-            thumb = url.split("\"")[1]
-#            print("found %s \n" %thumb)
-            break
+    # for url in urls:
+    #     thumb = random.choice(urls)
+    #     thumb = thumb.split("\"")[1]
+    #     if identifier in url:
+    #         thumb = url.split("\"")[1]
+    #         print("FoundFoundFound Found %s \n" %thumb)
+    #         break
 
+    thumb = thumbnail[i]
     title_lower = titles[i].lower()
     md_file_name = title_lower.replace(" ","-")
     print(md_file_name)
