@@ -1,8 +1,10 @@
 #!/bin/sh
 
 #Set Paths
-TOP_DIR_VAR=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
-export TOP_DIR TOP_DIR_VAR
+#TOP_DIR_VAR=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
+TOP_DIR_VAR=$(git rev-parse --show-toplevel)
+export TOP_DIR=$(git rev-parse --show-toplevel)
+echo ${TOP_DIR}
 
 #Set Alias for Scripts
 alias newd="python3 ${TOP_DIR_VAR}/scripts/CreatePostContainer.py -dir "
