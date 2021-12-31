@@ -1,5 +1,5 @@
 ---
-title: "Endless Frames of Golden Gate Bridge"
+title: "Golden Gate Bridge"
 date: 2019-04-21T19:12:19+00:00 #TODO
 #hero: https://farm66.staticflickr.com/65535/50822850797_01dbac28dc_b.jpg
 hero: /images/sections/posts/endless-frames-of-golden-gate-bridge.png
@@ -10,9 +10,9 @@ author:
 
 menu:
   sidebar:
-    name: Endless Frames of Golden Gate Bridge
+    name: Golden Gate Bridge
     #identifier: my-travel
-    parent: california-golden-west
+    parent: californa-golden-west
     #weight: 1
 
 #<br /> {{< figure src="https://farm66.staticflickr.com/65535/51789298382_3628948753_b.jpg">}}
