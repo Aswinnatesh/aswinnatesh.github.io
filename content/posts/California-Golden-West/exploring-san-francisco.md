@@ -17,7 +17,7 @@ menu:
 
 #####  `Exploring San Francisco!`
 
-I'm very excited about this 5-minute video about my favorite city to explore "San Francisco". This video was filmed around 2019 Christmas over a few days while biking around the city. I hope you are just as excited as I am for this video and thanks for watching!
+I'm very excited to share this 5-minute video about my favorite city to explore "San Francisco". This video was filmed around 2019 Christmas over a few days while biking around the city. I hope you are just as excited as I am for this video and thanks for watching!
 
 <br />
 
